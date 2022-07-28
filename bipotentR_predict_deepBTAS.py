@@ -19,7 +19,7 @@ parser.add_argument('--output_file', default='output.txt', help="Output file wit
 parser.add_argument('--saved_model_dir', default='best', help="name of the director in in which embedding_model (embedding_model.pth and output_model.pth are stored. Make sure the saved models name are exact")
 parser.add_argument('--type_prediction', default='immune_metabolism',
                     help=" ('immune_metabolism or angiogenesis) Prediction based on immune metabolism bipotent targets  \n \
-                    or angiogenesis + growth - suprressort bipotent targets")
+                    or angiogenesis + growth - suprressor bipotent targets")
 match = lambda a, b: [b.index(x) if x in b else None for x in a]
 
 
