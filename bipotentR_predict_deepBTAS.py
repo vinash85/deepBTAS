@@ -117,8 +117,8 @@ if __name__ == '__main__':
     output_file = args.output_file
     input_file = args.input_file
     saved_model_dir = args.saved_model_dir
-    embedding_path = saved_model_dir + "/embedding_model.pth"
-    output_model_path = saved_model_dir + "/output_model.pth"
+    embedding_path = saved_model_dir + "/embedding_model_scripted.pt"
+    output_model_path = saved_model_dir + "/outputs_scripted.pt"
 # output_file = "/homes6/asahu/temp.csv"
 # embedding_path = "/homes6/asahu/project/deeplearning/icb/data/ESRRA/saved.models/ESRRA.38.mixed.training.mixed_20220525-233307/embedding_model.pth"
 # output_model_path = "/homes6/asahu/project/deeplearning/icb/data/ESRRA/saved.models/ESRRA.38.mixed.training.mixed_20220525-233307/output_model.pth"
@@ -152,8 +152,10 @@ if __name__ == '__main__':
     else:
         ensembl_input_genes = angiogenesis_ensembl_input_genes
 
-    embedding_model = torch.load(embedding_path)
-    outputs = torch.load(output_model_path)
+    # embedding_model = torch.load(embedding_path)
+    # outputs = torch.load(output_model_path)
+    embedding_model = torch.jit.load(embedding_path)
+    outputs = torch.jit.load(output_model_path)
 
     embedding_model = embedding_model.cpu()
     outputs = outputs.cpu()
