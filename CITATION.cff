@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "BTAS webserver"
+message: 'If you use this software, please cite it as below.'
+type: software
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2022-11-15
+url: "https://github.com/vinash85/deeptransporter"
+authors:
+  - given-names: Avinash
+    family-names: Sahu
+    name-particle: Avinash
+    email: avinash.sahu@gmail.com
+    affiliation: Dana Farber Cancer Institute
+    orcid: 'https://orcid.org/0000-0002-2193-6276'
